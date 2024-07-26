@@ -26,46 +26,48 @@ public class PaymentReceipt extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        paymentReceiptLabel = new javax.swing.JLabel();
-        nameLabel = new javax.swing.JLabel();
-        emailLabel = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         contactNoLabel = new javax.swing.JLabel();
-        startDateLabel = new javax.swing.JLabel();
-        endDateLabel = new javax.swing.JLabel();
+        txtPaymentEmail = new javax.swing.JTextField();
+        txtPaymentStartDate = new javax.swing.JTextField();
+        totalPaymentLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        txtPaymentName = new javax.swing.JTextField();
+        txtPayment = new javax.swing.JTextField();
         daysRentedLabel = new javax.swing.JLabel();
         pricePerDayLabel = new javax.swing.JLabel();
-        totalPaymentLabel = new javax.swing.JLabel();
         paidButton = new javax.swing.JButton();
+        endDateLabel = new javax.swing.JLabel();
+        txtPaymentDaysRented = new javax.swing.JTextField();
+        txtPaymentEndDate = new javax.swing.JTextField();
+        paymentReceiptLabel = new javax.swing.JLabel();
+        startDateLabel = new javax.swing.JLabel();
+        txtPricePerDay = new javax.swing.JTextField();
+        txtPaymentContact = new javax.swing.JTextField();
+        nameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        paymentReceiptLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        paymentReceiptLabel.setForeground(new java.awt.Color(102, 204, 255));
-        paymentReceiptLabel.setText("Payment Receipt");
-
-        nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        nameLabel.setText("Name:");
-
-        emailLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        emailLabel.setText("Email:");
 
         contactNoLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         contactNoLabel.setText("Contact No:");
 
-        startDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        startDateLabel.setText("Start Date:");
+        totalPaymentLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        totalPaymentLabel.setText("Total Payment:");
 
-        endDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        endDateLabel.setText("End Date:");
+        emailLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        emailLabel.setText("Email:");
+
+        txtPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaymentActionPerformed(evt);
+            }
+        });
 
         daysRentedLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         daysRentedLabel.setText("Days Rented:");
 
         pricePerDayLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         pricePerDayLabel.setText("Price Per Day:");
-
-        totalPaymentLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        totalPaymentLabel.setText("Total Payment:");
 
         paidButton.setBackground(new java.awt.Color(102, 204, 255));
         paidButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -78,58 +80,129 @@ public class PaymentReceipt extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(paymentReceiptLabel))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(paidButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(51, 51, 51)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(emailLabel)
+        endDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        endDateLabel.setText("End Date:");
+
+        txtPaymentDaysRented.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaymentDaysRentedActionPerformed(evt);
+            }
+        });
+
+        paymentReceiptLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        paymentReceiptLabel.setForeground(new java.awt.Color(102, 204, 255));
+        paymentReceiptLabel.setText("Payment Receipt");
+
+        startDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        startDateLabel.setText("Start Date:");
+
+        txtPaymentContact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPaymentContactActionPerformed(evt);
+            }
+        });
+
+        nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        nameLabel.setText("Name:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(paymentReceiptLabel))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(paidButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)))
+                        .addGap(75, 75, 75))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(emailLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPaymentEmail))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPaymentName))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(contactNoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(startDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(endDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(daysRentedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(pricePerDayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(totalPaymentLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(123, 123, 123))
+                            .addComponent(totalPaymentLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtPaymentContact)
+                            .addComponent(txtPaymentStartDate)
+                            .addComponent(txtPaymentEndDate)
+                            .addComponent(txtPaymentDaysRented)
+                            .addComponent(txtPricePerDay)
+                            .addComponent(txtPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(paymentReceiptLabel)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameLabel)
+                    .addComponent(txtPaymentName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailLabel)
+                    .addComponent(txtPaymentEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(contactNoLabel)
+                    .addComponent(txtPaymentContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(startDateLabel)
+                    .addComponent(txtPaymentStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(endDateLabel)
+                    .addComponent(txtPaymentEndDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(daysRentedLabel)
+                    .addComponent(txtPaymentDaysRented, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pricePerDayLabel)
+                    .addComponent(txtPricePerDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(totalPaymentLabel)
+                    .addComponent(txtPayment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(paidButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(paymentReceiptLabel)
-                .addGap(34, 34, 34)
-                .addComponent(nameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contactNoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(startDateLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(endDateLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(daysRentedLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pricePerDayLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(totalPaymentLabel)
-                .addGap(18, 18, 18)
-                .addComponent(paidButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -138,6 +211,18 @@ public class PaymentReceipt extends javax.swing.JFrame {
     private void paidButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paidButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_paidButtonActionPerformed
+
+    private void txtPaymentContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaymentContactActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaymentContactActionPerformed
+
+    private void txtPaymentDaysRentedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaymentDaysRentedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaymentDaysRentedActionPerformed
+
+    private void txtPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPaymentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPaymentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,11 +264,20 @@ public class PaymentReceipt extends javax.swing.JFrame {
     private javax.swing.JLabel daysRentedLabel;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JLabel endDateLabel;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JButton paidButton;
     private javax.swing.JLabel paymentReceiptLabel;
     private javax.swing.JLabel pricePerDayLabel;
     private javax.swing.JLabel startDateLabel;
     private javax.swing.JLabel totalPaymentLabel;
+    private javax.swing.JTextField txtPayment;
+    private javax.swing.JTextField txtPaymentContact;
+    private javax.swing.JTextField txtPaymentDaysRented;
+    private javax.swing.JTextField txtPaymentEmail;
+    private javax.swing.JTextField txtPaymentEndDate;
+    private javax.swing.JTextField txtPaymentName;
+    private javax.swing.JTextField txtPaymentStartDate;
+    private javax.swing.JTextField txtPricePerDay;
     // End of variables declaration//GEN-END:variables
 }

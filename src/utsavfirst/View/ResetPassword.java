@@ -29,12 +29,12 @@ public class ResetPassword extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         labelResetPassword = new javax.swing.JLabel();
         email = new javax.swing.JLabel();
-        emailField = new javax.swing.JPasswordField();
+        txtResetEmail = new javax.swing.JPasswordField();
         newPassword = new javax.swing.JLabel();
         confirmPassword = new javax.swing.JLabel();
-        buttonChangePassword = new javax.swing.JButton();
-        confirmPasswordField = new javax.swing.JPasswordField();
-        passwordField = new javax.swing.JPasswordField();
+        btnChangePassword = new javax.swing.JButton();
+        txtResetConfirmPassword = new javax.swing.JPasswordField();
+        txtResetPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,15 +56,15 @@ public class ResetPassword extends javax.swing.JFrame {
         confirmPassword.setForeground(new java.awt.Color(0, 153, 255));
         confirmPassword.setText("Confirm Password");
 
-        buttonChangePassword.setBackground(new java.awt.Color(0, 153, 255));
-        buttonChangePassword.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        buttonChangePassword.setForeground(new java.awt.Color(255, 255, 255));
-        buttonChangePassword.setText("ChangePassword");
-        buttonChangePassword.setBorder(null);
+        btnChangePassword.setBackground(new java.awt.Color(0, 153, 255));
+        btnChangePassword.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnChangePassword.setForeground(new java.awt.Color(255, 255, 255));
+        btnChangePassword.setText("ChangePassword");
+        btnChangePassword.setBorder(null);
 
-        confirmPasswordField.addActionListener(new java.awt.event.ActionListener() {
+        txtResetConfirmPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmPasswordFieldActionPerformed(evt);
+                txtResetConfirmPasswordActionPerformed(evt);
             }
         });
 
@@ -75,14 +75,14 @@ public class ResetPassword extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonChangePassword, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnChangePassword, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelResetPassword, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(emailField, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                    .addComponent(txtResetEmail, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
                     .addComponent(email)
                     .addComponent(newPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                    .addComponent(txtResetPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
                     .addComponent(confirmPassword)
-                    .addComponent(confirmPasswordField))
+                    .addComponent(txtResetConfirmPassword))
                 .addGap(47, 47, 47))
         );
         jPanel1Layout.setVerticalGroup(
@@ -93,17 +93,17 @@ public class ResetPassword extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(email)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtResetEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(newPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtResetPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(confirmPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtResetConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(buttonChangePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnChangePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
         );
 
@@ -121,9 +121,9 @@ public class ResetPassword extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void confirmPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmPasswordFieldActionPerformed
+    private void txtResetConfirmPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResetConfirmPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_confirmPasswordFieldActionPerformed
+    }//GEN-LAST:event_txtResetConfirmPasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,14 +161,14 @@ public class ResetPassword extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonChangePassword;
+    private javax.swing.JButton btnChangePassword;
     private javax.swing.JLabel confirmPassword;
-    private javax.swing.JPasswordField confirmPasswordField;
     private javax.swing.JLabel email;
-    private javax.swing.JPasswordField emailField;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelResetPassword;
     private javax.swing.JLabel newPassword;
-    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JPasswordField txtResetConfirmPassword;
+    private javax.swing.JPasswordField txtResetEmail;
+    private javax.swing.JPasswordField txtResetPassword;
     // End of variables declaration//GEN-END:variables
 }
