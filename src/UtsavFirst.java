@@ -1,5 +1,6 @@
 
-import utsavfirst.View.log;
+//import utsavfirst.View.log;
+import utsavfirst.View.PersonalDetails;
 
 
 /*
@@ -15,8 +16,11 @@ public class UtsavFirst {
 
     public static void main(String[] args) {
 //         Create instances of Login and signup classes
-        log login = new log();
-        login.setVisible(true);
+//        log login = new log();
+//        login.setVisible(true);
+//        
+        PersonalDetails pd=new PersonalDetails();
+        pd.setVisible(true);
 //
      
     }
